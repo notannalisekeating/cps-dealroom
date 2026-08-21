@@ -1,5 +1,5 @@
-export type Persona = "business" | "legal";
-export type Surface = "teams" | "deal" | "new-request";
+export type Persona = "business" | "legal" | "leadership" | "operations";
+export type Surface = "teams" | "home" | "deal" | "new-request" | "apps";
 
 export type SellerAnswers = {
   hosting: "Germany only" | "EU" | "Global" | "Customer hasn't confirmed";
@@ -23,6 +23,7 @@ export type DemoState = {
   managerMessageOpen: boolean;
   specialistInviteOpen: boolean;
   newRequestOpen: boolean;
+  legalComplete?: boolean;
 };
 
 export const matter = {
@@ -35,6 +36,8 @@ export const matter = {
   customerType: "Strategic Enterprise",
   accountLabel: "Strategic Account",
   targetClose: "September 30",
+  expectedResponse: "Tomorrow, 2:00 PM",
+  owner: "Priya Shah",
   initiative: "FY27 Strategic AI Adoption",
   executiveSponsored: true,
   competitivePressure: true,
@@ -111,7 +114,28 @@ export const matter = {
       action: "Request input",
     },
   ],
+  connectedContext: [
+    { product: "Outlook", detail: "3 relevant threads" },
+    { product: "Teams", detail: "#contoso-deal · 14 messages" },
+    { product: "SharePoint", detail: "4 related documents" },
+    { product: "Dynamics 365", detail: "Opportunity · $18.4M" },
+    { product: "Word", detail: "Contoso_Azure_AI_Redline.docx" },
+  ],
+  activity: [
+    ["9:42 AM", "Agreement received"],
+    ["9:43 AM", "CPS Deal Room created"],
+    ["9:44 AM", "Initial analysis completed"],
+    ["9:47 AM", "Assigned to Priya Shah"],
+    ["10:18 AM", "Priya reviewed customer liability changes"],
+    ["Now", "CPS review in progress"],
+  ],
 };
+
+export const deals = [
+  { customer: "Contoso", deal: matter.title, stage: "Contracting", status: "Legal review", next: "Confirm launch timing", close: "Sep 30", attention: true },
+  { customer: "Northwind", deal: "Cloud services renewal", stage: "Proposal", status: "Seller input needed", next: "Review liability impact", close: "Oct 14", attention: true },
+  { customer: "Fabrikam", deal: "Security platform expansion", stage: "Contracting", status: "On track", next: "CPS response tomorrow", close: "Oct 31", attention: false },
+];
 
 export const defaultAnswers: SellerAnswers = {
   hosting: "Germany only",
