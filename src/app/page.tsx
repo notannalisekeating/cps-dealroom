@@ -238,8 +238,17 @@ function Question({ number, title, value, options, onChange }: { number: string;
 
 function AppShell({ state, switchPersona, openSurface, children }: { state: DemoState; switchPersona: (persona: Persona) => void; openSurface: (surface: Surface) => void; children: React.ReactNode }) {
   return <div className="navigator-shell">
-    <header className="app-topbar"><div className="brand"><span className="brand-mark"><Gavel20Regular /></span><span>CPS Navigator</span></div><div className="persona-switch" aria-label="Persona"><button className={state.persona === "business" ? "active" : ""} onClick={() => switchPersona("business")}>Business</button><button className={state.persona === "legal" ? "active" : ""} onClick={() => switchPersona("legal")}>Legal</button></div><div className="user-menu"><span>Maya Chen</span><Avatar name="Maya Chen" size={32} /></div></header>
-    <div className="app-body"><nav className="app-nav" aria-label="Primary navigation"><button className={state.surface === "deal" ? "active" : ""} onClick={() => openSurface("deal")}><Home20Regular />Overview</button><button onClick={() => openSurface("teams")}><People20Regular />Ask CPS</button>{state.persona === "business" && <button className={state.surface === "new-request" ? "active" : ""} onClick={() => openSurface("new-request")}><Add20Regular />New request</button>}<div className="nav-spacer" /><button><Info20Regular />Help</button></nav><main className="app-main">{children}</main></div>
+    <header className="app-topbar">
+      <Tooltip content="Microsoft 365 apps" relationship="label"><Button className="app-launcher" appearance="subtle" icon={<Apps20Regular />} aria-label="Microsoft 365 apps" /></Tooltip>
+      <div className="brand"><span className="brand-mark"><Gavel20Regular /></span><span>CPS Navigator</span></div>
+      <Input className="global-search" aria-label="Search CPS Navigator" placeholder="Search matters, customers, and guidance" />
+      <div className="suite-actions">
+        <div className="persona-switch" aria-label="Workspace view"><button className={state.persona === "business" ? "active" : ""} onClick={() => switchPersona("business")}>Business</button><button className={state.persona === "legal" ? "active" : ""} onClick={() => switchPersona("legal")}>Legal</button></div>
+        <Tooltip content="Settings and more" relationship="label"><Button appearance="subtle" icon={<MoreHorizontal20Regular />} aria-label="Settings and more" /></Tooltip>
+        <div className="user-menu"><span>Maya Chen</span><Avatar name="Maya Chen" size={32} /></div>
+      </div>
+    </header>
+    <div className="app-body"><nav className="app-nav" aria-label="Primary navigation"><span className="nav-label">Workspace</span><button className={state.surface === "deal" ? "active" : ""} onClick={() => openSurface("deal")}><Home20Regular />Deal overview</button><button onClick={() => openSurface("teams")}><People20Regular />Ask CPS</button>{state.persona === "business" && <button className={state.surface === "new-request" ? "active" : ""} onClick={() => openSurface("new-request")}><Add20Regular />New request</button>}<div className="nav-spacer" /><button><Info20Regular />Help & support</button></nav><main className="app-main">{children}</main></div>
   </div>;
 }
 
@@ -247,7 +256,7 @@ function BusinessNavigator({ state, update }: { state: DemoState; update: (patch
   const answered = Boolean(state.sellerAnswers);
   const readiness = answered ? matter.answeredReadiness : matter.initialReadiness;
   return <div className="page business-page">
-    <div className="breadcrumbs"><Button appearance="subtle" icon={<ArrowLeft20Regular />} onClick={() => update({ surface: "teams" })}>Back to Teams</Button></div>
+    <div className="page-commandbar"><Button appearance="subtle" icon={<ArrowLeft20Regular />} onClick={() => update({ surface: "teams" })}>Back to Teams</Button><span>{matter.id}</span></div>
     <header className="matter-header"><div><span className="eyebrow">Deal Navigator</span><h1>{matter.title}</h1><p>{matter.opportunityValue} · {matter.region} · {matter.product}</p></div><Status tone="info">Legal review underway</Status></header>
     <section className="outcome-panel"><div className="outcome-copy"><span className="eyebrow">Current outlook</span><h2>Your deal is moving</h2><p>Most requested changes are on a clear path. CPS is reviewing two items that could affect timing.</p></div><div className="outcome-metrics"><Metric label="Expected path" value={matter.expectedPath} /><Metric label="Deal readiness" value={`${readiness}%`} /><Metric label="Business impact" value="High" /><Metric label="Legal risk" value="Moderate" tone="warning" /></div><ProgressBar value={readiness / 100} thickness="medium" aria-label={`Deal readiness ${readiness}%`} /></section>
     <div className="business-grid"><div className="primary-column">
