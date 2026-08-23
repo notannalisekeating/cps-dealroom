@@ -28,6 +28,11 @@ export type DemoState = {
   specialistInviteOpen: boolean;
   newRequestOpen: boolean;
   legalComplete?: boolean;
+  trainingComplete?: boolean;
+  forecastApplied?: boolean;
+  forecastDialogOpen?: boolean;
+  routingRuleEnabled?: boolean;
+  adminConfirmOpen?: boolean;
 };
 
 export const matter = {
