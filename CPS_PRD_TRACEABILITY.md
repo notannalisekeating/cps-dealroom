@@ -28,7 +28,7 @@
 | LEG-03 | Synthesized commercial brief | Addendum 11 | Legal | Matter workspace | Commercial brief | Product, value, forecast, objective, competition | Expand brief | Disclosure state | None | Implemented | CRM connection simulated | P0 | Verified 2026-08-23 |
 | LEG-04 | Explain issue, significance, playbook, posture, and decision | Addendum 12 | Legal | Matter workspace | Legal issue detail | Issue and guidance | Expand issue | Disclosure state | Decision path | Implemented | None | P0 | Verified 2026-08-23 |
 | LEG-05 | Sources, citations, precedent, and comparable matters | Addendum 13 | Legal | Matter / Playbooks | Evidence disclosure | Source records | Expand evidence | Disclosure state | Verifiability | Implemented | Deep source navigation simulated | P0 | Verified 2026-08-23 |
-| LEG-06 | Decision updates Seller and Teams | Refresh journey | Legal | Matter workspace | Decision dialog | Recommendation and actor | Confirm decision | Legal complete | Seller and Teams status update | Implemented | Persistence simulated | P0 | Verified 2026-08-23 |
+| LEG-06 | Decision updates Seller and Teams | Refresh journey | Legal | Matter workspace | Decision dialog | Recommendation and actor | Confirm decision | Legal complete | Seller and Teams status update | Implemented | Browser-persistent prototype state | P0 | Verified 2026-08-23 |
 | LEG-07 | Show business partner and org context | Addendum 7, 8 | Legal | Matter workspace | Your business partner | Seller and organization | View org | Disclosure state | None | Implemented | None | P1 | Verified 2026-08-23 |
 | LEG-08 | Show seller training readiness | Conversation requirement | Legal | Matter workspace | Business readiness | Training state | View matter | None | Shared coaching context | Implemented | Assignment action is P2 | P1 | Verified 2026-08-23 |
 | LDR-01 | Decision-ready portfolio value and risk | Prompt Phase J | Leadership | Intelligence / Portfolio | Metrics and portfolio | Matters and forecast | Filter / drill down | View state | Supporting deals | Implemented | Aggregates simulated | P0 | Verified 2026-08-23 |
@@ -36,19 +36,19 @@
 | LDR-03 | Training gaps and coaching outcomes | Conversation requirement | Leadership | Intelligence | Coaching insight | Completion and cycle data | View coaching gaps | Drill-down state | Recommended action shown | Implemented | Cohort analytics simulated | P1 | Verified 2026-08-23 |
 | LDR-04 | Movement by category, region, segment, product | Conversation requirement | Leadership | Intelligence | Filters | Portfolio dimensions | Change filter | Filter state | Metrics scoped | Partial | Filters are prototype controls | P1 | Verified 2026-08-23 |
 | OPS-01 | Service and integration health | Prompt Phase J | Operations | Service health | Service table | Component status | Expand incident | Disclosure state | Incident context | Implemented | Monitoring feed simulated | P0 | Verified 2026-08-23 |
-| OPS-02 | Intake, routing, workload, and SLA health | Conversation requirement | Operations | Request operations | Operations workspace | Queue and SLA | Open row | Detail selection | Affected requests | Partial | Row drill-down depth is limited | P1 | Verified 2026-08-23 |
+| OPS-02 | Intake, routing, workload, and SLA health | Conversation requirement | Operations | Request operations | Operations workspace | Queue and SLA | Open row | Detail selection | Affected requests | Implemented | Live queue backend simulated | P1 | Verified 2026-08-23 |
 | OPS-03 | AI quality, escalation, workflow failures, safe mode | Prompt Phase J | Operations | Service health / Quality | Diagnostics | Quality telemetry | Expand diagnostics | Disclosure state | Quality review | Implemented | Telemetry simulated | P1 | Verified 2026-08-23 |
 | ADM-01 | Routing rules with confirmation and audit | Conversation requirement | Administration | Settings | Routing control | Rule and scope | Enable / disable | Rule changes | Active workflow count and audit update | Implemented | Backend rule engine simulated | P0 | Verified 2026-08-23 |
-| ADM-02 | Training assignment rules | Conversation requirement | Administration | Settings | Assignment rule | Trigger and module | Review rule | None | Seller assignment behavior | Partial | Editing is P2 | P1 | Verified 2026-08-23 |
-| ADM-03 | Forecast mapping and synchronization | Conversation requirement | Administration | Settings | Forecast mapping | CRM field mapping | Review mapping | None | Seller and Leadership fields | Partial | Mapping editor is P2 | P1 | Verified 2026-08-23 |
+| ADM-02 | Training assignment rules | Conversation requirement | Administration | Settings | Assignment rule | Trigger and module | Review rule | None | Seller assignment behavior | Implemented | LMS assignment write simulated | P1 | Verified 2026-08-23 |
+| ADM-03 | Forecast mapping and synchronization | Conversation requirement | Administration | Settings | Forecast mapping | CRM field mapping | Review mapping | None | Seller and Leadership fields | Implemented | CRM schema write simulated | P1 | Verified 2026-08-23 |
 | ADM-04 | Roles, integrations, notifications, playbook lifecycle, quality queue | Conversation requirement | Administration | Settings / Quality / Playbooks | Admin destinations | Configuration data | Navigate / inspect | View state | Operational governance | Partial | Full editors are P2 | P1 | Verified 2026-08-23 |
 | TMS-01 | Normal, lived-in employee Teams environment | Corrective pass; conversation | Teams | Chat | Teams shell | Chats, channels, apps | Navigate | Selection / disclosure state | CPS remains one destination | Implemented | Exact Teams parity not intended | P0 | Verified 2026-08-23 |
 | TMS-02 | Unread, Channels, Chats, Meeting chats filters | Conversation requirement | Teams | Chat | Filter tabs | Chat categories | Select filter | Filter state | List label/content changes | Implemented | Full filtering dataset simulated | P1 | Verified 2026-08-23 |
 | TMS-03 | Collapsible Quick views, Favorites, Chats, Teams and channels, Communities | Conversation requirement | Teams | Chat | Navigation groups | Employee workspace items | Expand / collapse | Disclosure state | None | Implemented | None | P1 | Verified 2026-08-23 |
 | TMS-04 | Commercial channels, ERGs, and unrelated employee conversations | Conversation requirement | Teams | Chat | Navigation list | Sample workspace data | Inspect / navigate | Selection state | None | Implemented | Channel conversations are P2 | P1 | Verified 2026-08-23 |
-| TMS-05 | Calendar, Calls, OneDrive, and Apps rail | Conversation requirement | Teams | App rail | Microsoft apps | App destinations | Select app | Destination state | App gallery where supported | Partial | Calendar/call surfaces are decorative | P2 | Verified 2026-08-23 |
-| TMS-06 | Request to analysis to seller input to lawyer decision to Teams update | Refresh journey | Teams and Deal Room | Ask CPS | Shared workflow | Matter lifecycle | Complete workflow | Shared matter state changes | All personas update | Implemented | Persistence simulated | P0 | Verified 2026-08-23 |
-| SHR-01 | Shared structured matter state across personas | Conversation requirement | All | All | DemoState and matter model | Seller, legal, training, forecast, admin state | Perform workflow actions | Shared state changes | Relevant persona views update | Implemented | Server persistence is out of prototype scope | P0 | Verified 2026-08-23 |
+| TMS-05 | Calendar, Calls, OneDrive, and Apps rail | Conversation requirement | Teams | App rail | Microsoft apps | App destinations | Select app | Destination state | App gallery where supported | Implemented | External Microsoft app data simulated | P1 | Verified 2026-08-23 |
+| TMS-06 | Request to analysis to seller input to lawyer decision to Teams update | Refresh journey | Teams and Deal Room | Ask CPS | Shared workflow | Matter lifecycle | Complete workflow | Shared matter state changes | All personas update | Implemented | Browser-persistent prototype state | P0 | Verified 2026-08-23 |
+| SHR-01 | Shared structured matter state across personas | Conversation requirement | All | All | DemoState and matter model | Seller, legal, training, forecast, admin state | Perform workflow actions | Shared state changes | Relevant persona views update | Implemented | Browser persistence implemented; server persistence requires backend | P0 | Verified 2026-08-23 |
 | VIS-01 | Fluent, quiet, work-focused UI with progressive disclosure | All guides | All | All | Global shell and screens | Design tokens and hierarchy | Use app | UI states | None | Implemented | Final responsive audit pending | P0 | Verified 2026-08-23 |
 
 ## Screen and navigation inventory
@@ -130,4 +130,17 @@ Verified on 2026-08-23:
 - Full editors for forecast mappings, training assignment rules, playbook lifecycle, notifications, roles, and access.
 - Server-backed audit records and multi-user concurrency.
 
-The corrective prototype is ready for stakeholder review. It should not be described as production-ready or advanced to integration-focused Phase 3 until the remaining external-system assumptions are approved.
+The corrective prototype completed stakeholder review and received approval to advance into the integration-focused Phase 3 prototype. It is not production-ready.
+
+## Phase 3 progress - 2026-08-23
+
+Stakeholder approval to proceed was received. The integration-focused prototype now includes:
+
+- Browser-persistent shared deal, training, forecast, legal, and Administration state.
+- Functional Teams Activity, Calendar, Calls, OneDrive, and commercial channel destinations.
+- Editable forecast-field and training-assignment configuration dialogs.
+- Microsoft 365 and Dynamics 365 connection-health detail.
+- Functional Operations and Administration row drill-downs.
+- Responsive verification at 390 by 844 and 1440 by 1000 with no document-level horizontal overflow.
+
+The next integration increment requires environment decisions and credentials for Microsoft Graph, Dynamics 365 or another CRM, the training/LMS system, authentication, and a server-side persistence and audit store. The local prototype does not transmit data to external systems.
