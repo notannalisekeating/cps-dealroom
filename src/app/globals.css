@@ -25,11 +25,11 @@ button:focus-visible,[tabindex]:focus-visible { outline:2px solid var(--text); o
 .teams-topbar > button:nth-of-type(2) { justify-self:end; }
 .teams-search { width:100%; }
 .teams-search input { background:#fff; }
-.teams-layout { height:calc(100vh - 48px); display:grid; grid-template-columns:320px minmax(0,1fr) 68px; gap:0; padding:0 0 8px 8px; }
+.teams-layout { height:calc(100vh - 48px); display:grid; grid-template-columns:68px 320px minmax(0,1fr); gap:0; padding:0 8px 8px 0; }
 .teams-rail { padding:8px 4px; background:#f1f1f6; }
 .rail-item { width:60px; height:56px; display:flex; flex-direction:column; justify-content:center; align-items:center; gap:2px; border:0; border-radius:4px; color:#424242; background:transparent; font-size:10px; cursor:pointer; }
 .rail-item:hover { background:#e5e5e5; }
-.rail-item.selected { color:#4f52b2; background:#fff; box-shadow:inset -3px 0 0 var(--teams); }
+.rail-item.selected { color:#4f52b2; background:#fff; box-shadow:inset 3px 0 0 var(--teams); }
 .rail-item svg { font-size:22px; }
 .chat-list { min-width:0; padding:12px 10px; background:#f1f1f6; overflow-y:auto; }
 .chat-list-title { height:40px; display:flex; align-items:center; justify-content:space-between; padding:0 8px 8px 12px; font-size:18px; }
@@ -377,7 +377,7 @@ button.deal-row:hover { background:#fafafa; }
 .cps-app small { color:var(--muted); font-weight:400; }
 
 @media (max-width:980px) {
-  .chat-list { display:none; }.teams-layout { grid-template-columns:minmax(0,1fr) 68px; }
+  .chat-list { display:none; }.teams-layout { grid-template-columns:68px minmax(0,1fr); }
   .app-body { grid-template-columns:68px minmax(0,1fr); }.app-nav { padding-left:4px; padding-right:4px; }.app-nav > button { justify-content:center; padding:0; font-size:0; }.persona-switch,.nav-label,.app-nav .new-request-button { display:none; }
   .overview-grid,.legal-layout { grid-template-columns:1fr; gap:16px; }.overview-grid aside,.legal-layout > aside { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
   .suite-bar { grid-template-columns:40px 184px 120px minmax(160px,1fr) auto; }
