@@ -1,5 +1,9 @@
 export type Persona = "business" | "legal" | "leadership" | "operations";
-export type Surface = "teams" | "home" | "deal" | "new-request" | "apps";
+export type Surface =
+  | "teams" | "home" | "deal" | "new-request" | "apps"
+  | "legal-queue" | "legal-playbooks"
+  | "portfolio" | "trends"
+  | "service-health" | "request-ops" | "quality" | "settings";
 
 export type SellerAnswers = {
   hosting: "Germany only" | "EU" | "Global" | "Customer hasn't confirmed";
